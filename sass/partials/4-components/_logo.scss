@@ -1,0 +1,39 @@
+.massIndex-img {
+  width: 40px;
+  height: 40px;
+  margin-inline: auto;
+  margin-top: 32px;
+  margin-bottom: 24px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+
+  @include large {
+    width: 64px;
+    height: 64px;
+
+    margin-bottom: 131px;
+  }
+}
+
+.massIndex__top-img {
+  display: flex;
+  align-self: center;
+
+  @include tablet {
+    align-self: center;
+  }
+
+  @include large {
+    align-self: flex-start;
+  }
+}
+
+.massIndex .show {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}

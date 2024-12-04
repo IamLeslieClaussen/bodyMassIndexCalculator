@@ -1,0 +1,30 @@
+/*******COLORS********/
+
+/**primary**/
+
+$primary-blue: hsl(227, 92%, 58%);
+$primary-Gunmetal: hsl(215, 31%, 21%);
+$primary-Dark-Electric-Blue: hsl(215, 17%, 45%);
+$primary-pure-white: hsl(0, 0%, 100%);
+
+/**Neutral**/
+$neutral-slate-900: hsl(202, 55%, 16%);
+$neutral-slate-700: hsl(200, 24%, 40%);
+$neutral-slate-500: hsl(200, 26%, 54%);
+
+/*font-size*/
+$f-normal: 16px;
+$f-large: 40px;
+
+/*font-weight*/
+$fw-light: 300;
+$fw-light-1: 400;
+$fw-medium: 600;
+$fw-heavy: 700;
+
+/*Media queries*/
+$tablet: 768px;
+$large: 1024px;
+$desktop: 1280px;
+
+$ff-Josefin-Sans: "Josefin Sans", sans-serif;

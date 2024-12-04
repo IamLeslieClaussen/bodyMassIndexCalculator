@@ -1,0 +1,530 @@
+.massIndex {
+  @include large {
+    width: calc(100% - 224px);
+  }
+}
+
+.massIndex__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    117deg,
+    rgba(255, 255, 255, 1) 69%,
+    rgba(145, 227, 255, 1) 100%
+  );
+
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+  height: 640px;
+
+  @include large {
+    width: 67%;
+  }
+}
+
+.massIndex__top__header {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  width: 327px;
+
+  @include tablet {
+    width: 686px;
+  }
+
+  @include large {
+    align-self: start;
+    margin-left: 5px;
+  }
+
+  p {
+    @include large {
+      text-align: start;
+      width: 450px;
+    }
+  }
+}
+
+.massIndex__top__header-header {
+  margin-bottom: 24px;
+
+  @include large {
+    font-size: 64px;
+    margin-bottom: 35px;
+    width: 564px;
+    text-align: left;
+  }
+}
+
+.massIndex__form {
+  margin-inline: 1rem;
+}
+
+.massIndex {
+  position: relative;
+}
+
+form {
+  position: absolute;
+  top: 470px;
+  right: 10px;
+  background-color: white;
+
+  width: 328px;
+  padding: 24px;
+
+  @include tablet {
+    width: 686px;
+    top: 300px;
+    right: 30px;
+  }
+
+  @include large {
+    width: 564px;
+  }
+
+  fieldset {
+    border: none;
+
+    legend {
+      margin-bottom: 2rem;
+      font-size: 1.3rem;
+      font-weight: 900;
+    }
+  }
+}
+
+//Radio-inputs//
+.massIndex__form__radio-inputs {
+  display: flex;
+  margin-bottom: 2rem;
+
+  .massIndex__form__radio-input {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  input[type="radio"] {
+    all: unset;
+    background-color: white;
+    min-width: 31px;
+    min-height: 31px;
+    border: 1px solid darkgray;
+    border-radius: 50%;
+    position: relative;
+
+    &:checked {
+      border: none;
+    }
+
+    &:hover {
+      border-color: blue;
+      cursor: pointer;
+    }
+
+    &::before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: blue;
+      transition: 120ms transform ease-in-out;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 120ms;
+      opacity: 0;
+    }
+
+    &:checked::before {
+      opacity: 1;
+    }
+  }
+}
+
+//metric-input//
+.massIndex__form__input-field-group-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  @include tablet {
+    flex-direction: row;
+  }
+}
+
+.light-text {
+  font-size: 14px;
+  color: grey;
+}
+
+.massIndex__form__input-field-group {
+  width: 100%;
+  input[type="number"] {
+    height: 69px;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid gray;
+    padding: 20px 24px 20px 24px;
+    margin-top: 1rem;
+
+    &:focus {
+      border-color: blue;
+      outline: none;
+    }
+  }
+}
+
+.input-group {
+  width: 100%;
+}
+
+.input-weight {
+  width: 100%;
+}
+
+.input-height {
+  width: 100%;
+}
+
+.massIndex__form__input-field-group-imperial {
+  .flex-groupA {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .flex-groupB {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.massIndex__form__input-field-group-metric {
+  .input-group {
+    position: relative;
+  }
+
+  .form-symbol {
+    position: absolute;
+    right: 30px;
+    color: red;
+    z-index: 10;
+    top: 60px;
+    font-size: 1.2rem;
+    color: blue;
+    font-weight: 600;
+  }
+}
+
+.massIndex__form__input-field-group-imperial {
+  margin-bottom: 2rem;
+}
+.massIndex__form-BMI-box {
+  padding: 32px;
+  background-color: blue;
+  color: white;
+  border-radius: 12px;
+  width: 100%;
+  display: flex;
+
+  @include tablet {
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+
+  p {
+    font-size: 10px;
+    color: white;
+    text-align: start;
+    margin-top: 1rem;
+  }
+}
+.input-height {
+  position: relative;
+}
+.input-height .form-symbol {
+  position: absolute;
+  top: 35px;
+  right: 15px;
+  font-size: 1.2rem;
+  color: blue;
+}
+
+.input-weight {
+  position: relative;
+}
+.input-weight .form-symbol {
+  position: absolute;
+  top: 35px;
+  right: 15px;
+  font-size: 1.2rem;
+  color: blue;
+}
+
+.massIndex__form-BMI-box-result {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    margin-top: -10px;
+  }
+
+  .result-text {
+    font-size: 10px;
+  }
+}
+
+.massIndex__form-BMI-box-result {
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+
+    div {
+      width: 100%;
+    }
+  }
+}
+.massIndex {
+  position: relative;
+  @include large {
+  }
+}
+
+form {
+  @include large {
+    position: absolute;
+    top: 150px;
+    right: -10px;
+  }
+}
+
+//massIndex-Intro
+
+.massIndex__intro {
+  position: relative;
+  margin-top: 450px;
+  margin-inline: 23px;
+
+  @include tablet {
+    display: flex;
+    flex-grow: 1;
+
+    div {
+      width: 100%;
+    }
+
+    margin-top: 150px;
+
+    .massIndex__habits-group-text {
+      padding: 2rem;
+    }
+  }
+
+  @include large {
+    .massIndex__intro-img {
+      width: 564px;
+      height: 533px;
+    }
+    .massIndex__intro-text-container {
+      position: absolute;
+      right: 300px;
+      bottom: 50px;
+      width: 456px;
+      height: 309px;
+    }
+
+    .massIndex__intro-text {
+      transform: translateX(200px) translateY(-20px);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-block: 3rem;
+    }
+  }
+
+  p {
+    text-align: left;
+  }
+
+  margin-bottom: 72px;
+}
+
+.massIndex__habits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-inline: 20px;
+  background-color: white;
+
+  @include large {
+    flex-direction: row;
+    gap: 50px;
+    transform: trans;
+  }
+
+  .massIndex__habits-group {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      margin-bottom: 2rem;
+    }
+
+    @include tablet {
+      flex-direction: row;
+      width: 686px;
+      gap: 18.5px;
+
+      align-items: center;
+
+      h3 {
+        margin-bottom: 3rem;
+      }
+    }
+
+    @include large {
+      flex-direction: column;
+      gap: 10px;
+
+      .massIndex__habits-img {
+        align-self: start;
+        background-color: lightgrey;
+      }
+    }
+
+    .massIndex__habits-img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50px;
+
+      margin-bottom: 32px;
+    }
+
+    p {
+      text-align: left;
+    }
+  }
+}
+
+.massIndex__limitations {
+  background-color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-inline: 25px;
+  margin-top: 4rem;
+
+  @include large {
+    height: 900px;
+    width: 1160px;
+    margin-inline: auto;
+  }
+
+  .massIndex__limitations-limitations {
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    margin-bottom: 3rem;
+
+    @include large {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 150px;
+      left: 0;
+
+      align-items: start;
+      width: 564px;
+
+      background-color: transparent;
+
+      h2 {
+        font-size: 3rem;
+      }
+
+      p {
+        text-align: left;
+      }
+    }
+  }
+
+  .massIndex__limitations-group-all {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    @include large {
+    }
+  }
+  @include large {
+    .massIndex__limitations-group.gender {
+      position: absolute;
+      bottom: 10px;
+      left: 100px;
+    }
+    .massIndex__limitations-group.age {
+      position: absolute;
+      bottom: -200px;
+    }
+
+    .massIndex__limitations-group.muscle {
+      position: absolute;
+      bottom: -210px;
+      left: 200px;
+    }
+    .massIndex__limitations-group.pregnancy {
+      position: absolute;
+      bottom: -500px;
+      right: 0px;
+    }
+    .massIndex__limitations-group.race {
+      position: absolute;
+      bottom: -500px;
+      left: 50px;
+    }
+  }
+
+  .massIndex__limitations-group {
+    background-color: transparent;
+    margin-bottom: 3rem;
+    padding: 32px;
+
+    .massIndex__limitations-group-img-header {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      text-align: left;
+    }
+
+    @include tablet {
+      width: 335.5px;
+      display: flex-row;
+    }
+  }
+}

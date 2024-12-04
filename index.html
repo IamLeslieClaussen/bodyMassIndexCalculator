@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="/sass/main.css" />
+    <title>Body Mass <div class="break">Index Calculator</div></title>
+  </head>
+  <body>
+    <div class="massIndex">
+      <div class="massIndex__top">
+        <div class="massIndex__top-img">
+          <img src="/assets/images/logo.svg" alt="logo" class="massIndex-img" />
+        </div>
+
+        <div class="massIndex__top__header">
+          <h1 class="massIndex__top__header-header">
+            Body Mass Index Calculator
+          </h1>
+          <p class="massIndex__top__header-text">
+            Better understand your weight in relation to your height using our
+            body mass index (BM) calculator. While BMI is not the sole
+            determinant of a healthy weight, it offers a valuable starting point
+            to evaluate your overall health and well-being.
+          </p>
+        </div>
+      </div>
+      <form action="" class="massIndex__form">
+        <fieldset>
+          <legend>Enter your details below</legend>
+          <!--Radio Inputs-->
+          <div class="massIndex__form__radio-inputs">
+            <div class="massIndex__form__radio-input">
+              <input
+                type="radio"
+                id="metric"
+                name="measurement-system"
+                value="metric"
+                required
+                checked
+              />
+              <label for="metric">Metric</label>
+            </div>
+
+            <div class="massIndex__form__radio-input">
+              <input
+                type="radio"
+                id="imperial"
+                name="measurement-system"
+                value="imperial"
+                required
+              />
+              <label for="imperial">Imperial</label>
+            </div>
+          </div>
+          <!--Radio Inputs-->
+          <!--Input fields-->
+          <div class="massIndex__form__input-field-group">
+            <div class="massIndex__form__input-field-group-metric">
+              <div class="input-group" id="metric-input-group-height">
+                <label for="metric-height" class="light-text">Height</label>
+                <div class="input-height" id="metric-input-height">
+                  <input
+                    type="number"
+                    type="number"
+                    id="metric-height"
+                    name="metric-height"
+                    required
+                  />
+                </div>
+                <p class="form-symbol">cm</p>
+              </div>
+
+              <div class="input-group" id="metric-input-group-weight">
+                <label for="metric-weight" class="light-text">Weight</label>
+                <div class="input-weight" id="metric-input-weight">
+                  <input
+                    type="number"
+                    type="number"
+                    id="metric-weight"
+                    name="metric-weight"
+                    required
+                  />
+                </div>
+                <p class="form-symbol">kg</p>
+              </div>
+            </div>
+            <!--Input fields metric-->
+            <!--Input fields imperial-->
+            <div class="massIndex__form__input-field-group-imperial hidden">
+              <div class="input-group" id="height">
+                <label for="imperial" class="light-text">Height</label>
+                <div class="flex-groupA">
+                  <div class="input-height" id="imperial-input-ft">
+                    <input
+                      type="number"
+                      id="imperial-height-ft"
+                      name="imperial-height-ft"
+                      required
+                    />
+                    <p class="form-symbol">ft</p>
+                  </div>
+
+                  <div class="input-height" id="imperial-input-in">
+                    <input
+                      type="number"
+                      id="imperial-height-in"
+                      name="imperial-height-in"
+                      required
+                    />
+                    <p class="form-symbol">in</p>
+                  </div>
+                </div>
+
+                <div class="input-group" id="weight">
+                  <label for="imperial" class="light-text">Weight</label>
+                  <div class="flex-groupB">
+                    <div class="input-weight" id="imperial-input-weight-st">
+                      <input
+                        type="number"
+                        id="imperial-weight-st"
+                        name="imperial-weight-st"
+                        required
+                      />
+                      <p class="form-symbol">st</p>
+                    </div>
+
+                    <div class="input-weight" id="imperial-input-weight-lbs">
+                      <input
+                        type="number"
+                        id="imperial-weight-lbs"
+                        name="imperial-weight-lbs"
+                        required
+                      />
+                      <p class="form-symbol">lbs</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--massIndex__form-result-->
+
+          <div class="massIndex__form-BMI-box">
+            <div class="massIndex__form-BMI-box__welcome">
+              <h3 class="massIndex__form-BMI-box__welcome-header">Welcome!</h3>
+              <p class="massIndex__form-BMI-box__welcome-text-text">
+                Enter your height and weight and you'll see your BMI result here
+              </p>
+            </div>
+            <div class="massIndex__form-BMI-box-result hidden">
+              <div class="massIndex__form-BMI-box-result-left">
+                <p>Your BMI is...</p>
+                <span class="result-number">23.4</span>
+              </div>
+              <div class="massIndex__form-BMI-box-result-right">
+                <span class="result-text"
+                  >Your BMI suggests you’re a healthy weight. Your ideal weight
+                  is between 63.3kgs - 85.2kgs.</span
+                >
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+
+      <!--Photo Intro-->
+      <div class="massIndex__intro">
+        <div class="massIndex__intro-img">
+          <img
+            src="/assets/images/image-man-eating.webp"
+            alt="image of guy eating"
+          />
+        </div>
+        <div class="massIndex__intro-text-container">
+          <div class="massIndex__intro-text">
+            <h2>What your BMI result means</h2>
+            <p>
+              A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
+              Maintaining a healthy weight may lower your chances of
+              experiencing health issues later on, such as obesity and type 2
+              diabetes. Aim for a nutritious diet with reduced fat and sugar
+              content, incorporating ample fruits and vegetables. Additionally,
+              strive for regular physical activity, ideally about 30 minutes
+              daily for five days a week.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="massIndex__habits">
+        <div class="massIndex__habits-group">
+          <div class="massIndex__habits-img">
+            <img src="/assets/images/icon-eating.svg" alt="logo" />
+          </div>
+
+          <div class="massIndex__habits-group-text">
+            <h3>Healthy eating</h3>
+            <p>
+              Healthy eating promotes weight control, disease prevention, better
+              digestion, immunity, mental clarity, and mood.
+            </p>
+          </div>
+        </div>
+
+        <div class="massIndex__habits-group">
+          <div class="massIndex__habits-img">
+            <img src="/assets/images/icon-exercise.svg" alt="logo" />
+          </div>
+
+          <div class="massIndex__habits-group-text">
+            <h3>Regular exercise</h3>
+            <p>
+              Exercise improves fitness, aids weight control, elevates mood, and
+              reduces disease risk, fostering wellness and longevity.
+            </p>
+          </div>
+        </div>
+
+        <div class="massIndex__habits-group">
+          <div class="massIndex__habits-img">
+            <img src="/assets/images/icon-sleep.svg" alt="logo" />
+          </div>
+
+          <div class="massIndex__habits-group-text">
+            <h3>Adequate sleep</h3>
+            <p>
+              Sleep enhances mental clarity, emotional stability, and physical
+              wellness, promoting overall restoration and rejuvenation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="massIndex__limitations">
+      <div class="massIndex__limitations-limitations">
+        <h2>Limitations of BMI</h2>
+        <p>
+          Although BMI is often a practical indicator of healthy weight, it is
+          not suited for every person. Specific groups should carefully consider
+          their BMI outcomes, and in certain cases, the measurement may not be
+          beneficial to use.
+        </p>
+      </div>
+
+      <div class="massIndex__limitations-group-all">
+        <div class="massIndex__limitations-group gender">
+          <div class="massIndex__limitations-group-img-header">
+            <img src="/assets/images/icon-gender.svg" alt="logo" />
+            <h3>Gender</h3>
+          </div>
+          <p>
+            The development and body fat composition of girls and boys vary with
+            age. Consequently, a child's age and gender are considered when
+            evaluating their BMI.
+          </p>
+        </div>
+
+        <div class="massIndex__limitations-group age">
+          <div class="massIndex__limitations-group-img-header">
+            <img src="/assets/images/icon-age.svg" alt="logo" />
+            <h3>Age</h3>
+          </div>
+          <p>
+            In aging individuals, increased body fat and muscle loss may cause
+            BMI to underestimate body fat content.
+          </p>
+        </div>
+
+        <div class="massIndex__limitations-group muscle">
+          <div class="massIndex__limitations-group-img-header">
+            <img src="/assets/images/icon-muscle.svg" alt="logo" />
+            <h3>Muscle</h3>
+          </div>
+          <p>
+            BMI may misclassify muscular individuals as overweight or obese, as
+            it doesn't differentiate muscle from fat.
+          </p>
+        </div>
+
+        <div class="massIndex__limitations-group pregnancy">
+          <div class="massIndex__limitations-group-img-header">
+            <img src="/assets/images/icon-pregnancy.svg" alt="logo" />
+            <h3>Pregnancy</h3>
+          </div>
+          <p>
+            Expectant mothers experience weight gain due to their growing baby.
+            Maintaining a healthy pre-pregnancy BMI is advisable to minimise
+            health risks for both mother and child.
+          </p>
+        </div>
+
+        <div class="massIndex__limitations-group race">
+          <div class="massIndex__limitations-group-img-header">
+            <img src="/assets/images/icon-race.svg" alt="logo" />
+            <h3>Race</h3>
+          </div>
+          <p>
+            Certain health concerns may affect individuals of some Black and
+            Asian origins at lower BMIs than others. To learn more, it is
+            advised to discuss this with your GP or practice nurse.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
